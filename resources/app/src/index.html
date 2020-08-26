@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Avito</title>
+  </head>
+  <body>
+      <div>
+        <input
+          value=""
+          id="searchtext"
+          type="text"
+          placeholder="Que recherchez-vous ?"
+        />
+      </div>
+      <div>
+        <select id="catgroup">
+          <option value="">Toutes les catégories</option>
+
+          <option value="informatique_et_multimedia">-- INFORMATIQUE ET MULTIMEDIA --</option>
+          <option value="téléphones">Téléphones</option>
+          <option value="Tablettes">Tablettes</option>
+          <option value="Ordinateurs portables">Ordinateurs portables</option>
+          <option value="Ordinateurs de bureau">Ordinateurs de bureau</option>
+          <option value="Accessoires informatique et Gadgets">Accessoires informatique et Gadgets</option>
+          <option value="Jeux vidéo et Consoles">Jeux vidéo et Consoles</option>
+          <option value="Appareils photo et Caméras">Appareils photo et Caméras</option>
+          <option value="Télévisions">Télévisions</option>
+          <option value="image_et_son">Image &amp; Son</option>
+          <option value="véhicules">-- VEHICULES --</option>
+          <option value="Voitures">Voitures</option>
+          <option value="Motos">Motos</option>
+          <option value="Vélos">Vélos</option>
+          <option value="Véhicules Professionnels">Véhicules Professionnels</option>
+          <option value="Bateaux">Bateaux</option>
+          <option value="Pièces et Accessoires pour véhicules">Pièces et Accessoires pour véhicules</option>
+          <option value="immobilier">-- IMMOBILIER --</option>
+          <option value="Appartements">Appartements</option>
+          <option value="Maisons et Villas" selected="">Maisons et Villas</option>
+          <option value="Bureaux et Plateaux">Bureaux et Plateaux</option>
+          <option value="magasins_et_commerces"
+            >Magasins, Commerces et Locaux industriels</option
+          >
+          <option value="Terrains et Fermes">Terrains et Fermes</option>
+          <option value="Locations de vacances">Locations de vacances</option>
+          <option value="Colocations">Colocations</option>
+          <option value="Autre Immobilier">Autre Immobilier</option>
+          <option value="pour_la_maision_et_jardin">-- POUR LA MAISON ET JARDIN --</option>
+          <option value="Electroménager et Vaisselles">Electroménager et Vaisselles</option>
+          <option value="Meubles et Décoration">Meubles et Décoration</option>
+          <option value="Jardin et Outils de bricolage">Jardin et Outils de bricolage</option>
+          <option value="HABILLEMENT ET BIEN ETRE">-- HABILLEMENT ET BIEN ETRE --</option>
+          <option value="Vêtements">Vêtements</option>
+          <option value="Chaussures">Chaussures</option>
+          <option value="Montres et Bijoux">Montres et Bijoux</option>
+          <option value="Sacs et Accessoires">Sacs et Accessoires</option>
+          <option value="Vêtements pour enfant et bébé">Vêtements pour enfant et bébé</option>
+          <option value="Equipements pour enfant et bébé">Equipements pour enfant et bébé</option>
+          <option value="Produits de beauté">Produits de beauté</option>
+          <option value="LOISIRS ET DIVERTISSEMENT">-- LOISIRS ET DIVERTISSEMENT --</option>
+          <option value="Sports et Loisirs">Sports et Loisirs</option>
+          <option value="Animaux">Animaux</option>
+          <option value="Instruments de Musique">Instruments de Musique</option>
+          <option value="Art et Collections">Art et Collections</option>
+          <option value="Voyages et Billetterie">Voyages et Billetterie</option>
+          <option value="films_livres_magazines">Films, Livres, Magazines</option>
+          <option value="EMPLOI ET SERVICES">-- EMPLOI ET SERVICES --</option>
+          <option value="Offres d'emploi">Offres d'emploi</option>
+          <option value="Offres de stages">Offres de stages</option>
+          <option value="Centre d'appels">Centre d'appels</option>
+          <option value="Cadres">Cadres</option>
+          <option value="Métiers IT">Métiers IT</option>
+          <option value="femme_de_menage_nounou_chauffeurs">Femmes de Ménages, Nounous et Chauffeurs</option>
+          <option value="Travaux de maison">Travaux de maison</option>
+          <option value="Demandes d'emploi">Demandes d'emploi</option>
+          <option value="Services">Services</option>
+          <option value="Cours et Formations">Cours et Formations</option>
+          <option value="ENTREPRISES">-- ENTREPRISES --</option>
+          <option value="Business et Affaires commerciales">Business et Affaires commerciales</option>
+          <option value="Matériels Professionnels">Matériels Professionnels</option>
+          <option value="Stocks et Vente en gros">Stocks et Vente en gros</option>
+          <option value="Autres">-- Autres --</option>
+        </select>
+        <i></i>
+      </div>
+      <div>
+        <select id="searcharea_expanded">
+          <option value="Maroc" selected="">Tout le Maroc</option>
+          <option value="0" disabled="disabled">-- AUTRES VILLES --</option>
+          <option id="searcharea_expanded_fisrt_option" value="Casablanca">
+            Casablanca</option
+          >
+          <option value="Agadir"> Agadir</option>
+          <option value="Al Hoceima"> Al Hoceima</option>
+          <option value="Béni Mellal"> Béni Mellal</option>
+          <option value="El Jadida"> El Jadida</option>
+          <option value="Errachidia"> Errachidia</option>
+          <option value="Fès"> Fès</option>
+          <option value="Kénitra"> Kénitra</option>
+          <option value="Khénifra"> Khénifra</option>
+          <option value="Khouribga"> Khouribga</option>
+          <option value="Larache"> Larache</option>
+          <option value="Marrakech"> Marrakech</option>
+          <option value="Meknès"> Meknès</option>
+          <option value="Nador"> Nador</option>
+          <option value="Ouarzazate"> Ouarzazate</option>
+          <option value="Oujda"> Oujda</option>
+          <option value="Rabat"> Rabat</option>
+          <option value="Safi"> Safi</option>
+          <option value="Settat"> Settat</option>
+          <option value="Salé"> Salé</option>
+          <option value="Tanger"> Tanger</option>
+          <option value="Taza"> Taza</option>
+          <option value="Tétouan"> Tétouan</option>
+          <option value="other">Choisir une autre ville...</option>
+        </select>
+        <i></i>
+      </div>
+      <div id="pricelist_0">
+        <input type="text" id="spr" placeholder="Prix min (DH)" value="" />
+        <input type="text" id="mpr" placeholder="Prix max (DH)" value="" />
+      </div>
+      <div>
+        <button id="searchbutton">
+          chercher
+        </button>
+      </div>
+      <div id="pages">
+        <div id="maxPages"></div>
+        depuis la page
+        <input
+          type="number"
+          id="from"
+          placeholder="de "
+          value="1"
+        />
+       vers
+        <input
+          type="number"
+          id="to"
+          placeholder="a"
+          value="2"
+        />
+        <button id="scrapbutton">
+          scrap
+        </button>
+      </div>
+      <div id="chargement">
+        chargement....
+      </div>
+      <div id="terminer">
+        terminer
+      </div>
+    </div>
+    <!-- You can also require other files to run in this process -->
+  </body>
+
+  <script src="linkers/linker.js"></script>
+</html>
